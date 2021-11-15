@@ -7,12 +7,21 @@ class Country(models.Model):
     name = models.CharField(max_length=100)
     code = models.CharField(max_length=3)
 
+    def __str__(self):
+        return str(self.name)
+
 
 class County(models.Model):
     name = models.CharField(max_length=100)
-    country = models.ForeignKey(Country, on_delete=models.CASCADE)
+    country = models.ForeignKey(Country, related_name='counties', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return str(self.name)
 
 
 class City(models.Model):
     name = models.CharField(max_length=100)
-    county = models.ForeignKey(County, on_delete=models.CASCADE)
+    county = models.ForeignKey(County,related_name='cities', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return str(self.name)

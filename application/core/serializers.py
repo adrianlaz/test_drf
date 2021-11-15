@@ -4,18 +4,22 @@ from core.models import Country, County, City
 
 
 class CountrySerializer(serializers.ModelSerializer):
+    counties = serializers.StringRelatedField(many=True)
+
     class Meta:
         model = Country
-        fields = ['id', 'name', 'code']
+        fields = ['id', 'name', 'code', 'counties']
 
 
 class CountySerializer(serializers.ModelSerializer):
+    cities = serializers.StringRelatedField(many=True)
+
     class Meta:
         model = County
-        fields = ['id', 'name']
+        fields = ['id', 'name', 'cities']
 
 
 class CitySerializer(serializers.ModelSerializer):
     class Meta:
         model = City
-        fields = ['id', 'name']
+        fields = ['id', 'name', 'county']
