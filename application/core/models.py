@@ -21,7 +21,7 @@ class County(models.Model):
 
 class City(models.Model):
     name = models.CharField(max_length=100)
-    county = models.ForeignKey(County,related_name='cities', on_delete=models.CASCADE)
+    county = models.ForeignKey(County, related_name='cities', on_delete=models.CASCADE)
 
     def __str__(self):
         return str(self.name)
