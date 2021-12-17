@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from rest_framework import viewsets
 
 # Create your views here.
@@ -17,6 +16,7 @@ class CountyViewSet(viewsets.ModelViewSet):
     serializer_class = CountySerializer
     queryset = County.objects.all()
     filterset_class = CountyFilter
+
 
 class CityViewSet(viewsets.ModelViewSet):
     serializer_class = CitySerializer
