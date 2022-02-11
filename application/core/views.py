@@ -8,6 +8,7 @@ from core.serializers import CountrySerializer, CountySerializer, CitySerializer
 
 class CountryViewSet(viewsets.ModelViewSet):
     """another test descriptipon"""
+    """Test description"""
     serializer_class = CountrySerializer
     queryset = Country.objects.all()
     filterset_class = CountryFilter
