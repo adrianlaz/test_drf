@@ -14,6 +14,7 @@ class CountryViewSet(viewsets.ModelViewSet):
 
 
 class CountyViewSet(viewsets.ModelViewSet):
+    "some more description"
     serializer_class = CountySerializer
     queryset = County.objects.all()
     filterset_class = CountyFilter
