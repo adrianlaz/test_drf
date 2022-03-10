@@ -16,10 +16,10 @@ class CountySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = County
-        fields = ['id',  'cities']
+        fields = ['id', 'name', 'cities']
 
 
 class CitySerializer(serializers.ModelSerializer):
     class Meta:
         model = City
-        fields = ['id', 'name']
+        fields = ['id', 'name', 'county']
