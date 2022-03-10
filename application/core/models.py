@@ -8,7 +8,7 @@ class Country(models.Model):
     code = models.CharField(max_length=3)
 
     def __str__(self):
-        return str(self.name)
+        return self.name
 
 
 class County(models.Model):
@@ -16,7 +16,7 @@ class County(models.Model):
     country = models.ForeignKey(Country, related_name='counties', on_delete=models.CASCADE)
 
     def __str__(self):
-        return str(self.name)
+        return self.name
 
 
 class City(models.Model):
@@ -24,4 +24,4 @@ class City(models.Model):
     county = models.ForeignKey(County, related_name='cities', on_delete=models.CASCADE)
 
     def __str__(self):
-        return str(self.name)
+        return self.name
