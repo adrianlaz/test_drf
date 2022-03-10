@@ -8,7 +8,7 @@ class CountrySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Country
-        fields = ['id', 'name', 'code', 'counties']
+        fields = ['id', 'name', 'counties']
 
 
 class CountySerializer(serializers.ModelSerializer):
