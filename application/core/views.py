@@ -21,4 +21,7 @@ class CountyViewSet(viewsets.ModelViewSet):
 class CityViewSet(viewsets.ModelViewSet):
     serializer_class = CitySerializer
     queryset = City.objects.all()
-    filterset_class = CityFilter
+    try:
+        filterset_class = CityFilter
+    except IndexError:
+        pass
