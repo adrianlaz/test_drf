@@ -16,6 +16,7 @@ class CountyViewSet(viewsets.ModelViewSet):
     serializer_class = CountySerializer
     queryset = County.objects.all()
     filterset_class = CountyFilter
+    lookup_field = 'pk'
 
 
 class CityViewSet(viewsets.ModelViewSet):
