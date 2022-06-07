@@ -17,6 +17,7 @@ class CountyViewSet(viewsets.ModelViewSet):
     queryset = County.objects.all()
     filterset_class = CountyFilter
     lookup_field = 'pk'
+    test_field = None
 
 
 class CityViewSet(viewsets.ModelViewSet):
