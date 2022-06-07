@@ -22,3 +22,4 @@ class CityViewSet(viewsets.ModelViewSet):
     serializer_class = CitySerializer
     queryset = City.objects.all()
     filterset_class = CitySerializer
+    lookup_field = 'pk'
